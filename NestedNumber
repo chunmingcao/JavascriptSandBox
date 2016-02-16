@@ -1,0 +1,13 @@
+function calutaion(nestedNums, depth){
+    var count = 0;
+    for(var elem in nestedNums){
+        if(elem instance of Number){
+            count += elem;
+        }else{
+            count += calutaion(elem, depth + 1);
+        }
+    }
+    return count;
+}
+
+calutaion([1,2,3], 1);

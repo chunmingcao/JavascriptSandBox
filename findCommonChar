@@ -1,0 +1,22 @@
+// Write a program that gives count of common characters presented in an array of strings..(or array of character arrays)
+
+function findCommonChar(strArray){
+    var count = [];
+    for(var i = 0; i < strArray.length; i ++){
+        var chars = strArray[i].split('');
+        for(var j = 0; j < chars.length; j ++){
+            count[chars[j]] ++;
+        }
+    }
+    for(var k = 'a'; k < 'z'; k ++){
+        if(count[k] == strArray.length){
+            console.log(k);
+        }
+    }
+}
+
+findCommonChar(['aghkafgklt',
+'dfghako',
+'qwemnaarkf'
+]);
+
